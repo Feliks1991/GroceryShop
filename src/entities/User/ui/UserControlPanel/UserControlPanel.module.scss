@@ -1,0 +1,23 @@
+.userDropDownButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(65, 65, 65, 1);
+    &:hover {
+      color: rgba(255, 102, 51, 1);
+      cursor: pointer;
+    }
+    span {
+      transform: rotate(-90deg);
+    }
+  }
+}

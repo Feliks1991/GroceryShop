@@ -1,0 +1,39 @@
+.headerSection {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.headerElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+
+.productsFind {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 531px;
+}
+
+.userPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 445px;
+}
+
+.userDropDownWrapper {
+  position: absolute;
+  right: 0;
+  transform: translateX(-170%);
+  width: 200px;
+  z-index: 25;
+}

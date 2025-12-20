@@ -1,0 +1,35 @@
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.regularPriceElement {
+  margin-top: 10px;
+}
+
+.regular {
+  font-weight: 400;
+  font-size: 24px;
+  color: #606060;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.priceDescription {
+  font-weight: 400;
+  font-size: 12px;
+  color: #bfbfbf;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 36px;
+  color: #414141;
+  text-align: center;
+}
+
+.currency {
+  margin-left: 8px;
+}

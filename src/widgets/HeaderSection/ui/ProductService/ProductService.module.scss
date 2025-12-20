@@ -1,0 +1,30 @@
+.serviceContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.serviceElement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 50px;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.serviceName {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(65, 65, 65, 1);
+}
+
+.icon {
+  color: rgba(65, 65, 65, 1);
+}
+
+.orange {
+  color: rgba(255, 102, 51, 1);
+}

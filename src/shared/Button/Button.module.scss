@@ -1,0 +1,16 @@
+.button {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(112, 192, 91, 1);
+  width: 100%;
+  padding: 11px 8px;
+  border: 1px solid rgba(112, 192, 91, 1);
+  border-radius: 4px;
+  &:hover {
+    border-color: rgba(255, 102, 51, 1);
+    background-color: rgba(255, 102, 51, 1);
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.4s;
+  }
+}

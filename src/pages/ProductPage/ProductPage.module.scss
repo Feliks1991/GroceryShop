@@ -1,0 +1,12 @@
+.productDataBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  max-width: 376px;
+  min-width: 336px;
+}

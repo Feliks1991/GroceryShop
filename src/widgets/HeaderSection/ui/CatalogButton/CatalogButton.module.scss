@@ -1,0 +1,34 @@
+.catalogButton {
+  display: flex;
+  background-color: rgba(112, 192, 91, 1);
+  border-radius: 4px;
+  height: 40px;
+  padding: 8px;
+}
+
+.catalogButtonIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 19px;
+  margin-right: 8px;
+  *:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  * {
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+    height: 1px;
+  }
+}
+
+.catalogButtonName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 1);
+}

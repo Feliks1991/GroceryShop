@@ -1,0 +1,20 @@
+.dropdownContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.dropdownLink {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(65, 65, 65, 1);
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &:hover {
+    color: rgba(255, 102, 51, 1);
+    cursor: pointer;
+  }
+}

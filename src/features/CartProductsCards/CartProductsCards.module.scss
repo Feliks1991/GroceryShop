@@ -1,0 +1,78 @@
+.cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartControllers {
+  display: flex;
+  width: 304px;
+  padding: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.deleteButton {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(255, 102, 51, 1);
+}
+
+.cartCards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 60px;
+  & > :not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.orderBlock {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  margin-left: auto;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  & > :not(:last-child):not(:first-child) {
+    margin-top: 10px;
+  }
+  & > :last-child {
+    margin-top: 50px;
+    margin-bottom: 24px;
+  }
+  & > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    & > p.title {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
+
+.totalPrice {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(65, 65, 65, 1);
+}
+
+.discount {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(255, 102, 51, 1);
+}
+
+.discountedPrice {
+  font-weight: 700;
+  font-size: 24px;
+  color: rgba(86, 86, 86, 1);
+}

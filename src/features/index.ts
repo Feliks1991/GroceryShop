@@ -1,0 +1,11 @@
+export { ProductImgsSlider } from "./ProductImgsSlider/ProductImgsSlider";
+export { BrandSelector } from "./Filters/ui/BrandSelector/BrandSelector";
+export { RangeSlider } from "./Filters/ui/RangeSlider/RangeSlider";
+export { PromoSlider } from "./PromoSlider/PromoSlider";
+export { UserData } from "./UserProfile/ui/UserData/UserData";
+export { Comments } from "./ProductComments/ui/Comments/Comments";
+export { SimilarProduct } from "./SimilarProduct/SimilarProduct";
+export { DescriptionTable } from "./Product/ui/DescriptionTable/DescriptionTable";
+export { ProductPagePrice } from "./Product/ui/ProductPagePrice/ProductPagePrice";
+export { CartProductsCards } from "./CartProductsCards/CartProductsCards";
+export { CategoryPageProductsCards } from "./CategoryPageProductsCards/CategoryPageProductsCards";

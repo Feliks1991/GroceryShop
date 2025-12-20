@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  background-color: rgba(255, 102, 51, 1);
+  border-radius: 4px;
+  padding: 8px;
+}
+.description {
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,114 @@
+.cartCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 10px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 228px;
+}
+
+.qtySelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(112, 192, 91, 1);
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 4px;
+  > button {
+    width: 24px;
+  }
+  > p {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.cardImgWrapper {
+  width: 80px;
+  height: 60px;
+  padding: 7px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.checkboxWrapper {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+}
+
+.metaWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 8px;
+}
+
+.totalPrice {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(65, 65, 65, 1);
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  > :not(:last-child) {
+    margin-right: 8px;
+  }
+  & span {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(191, 191, 191, 1);
+  }
+  > p {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(96, 96, 96, 1);
+  }
+}
+
+.priceBold {
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(65, 65, 65, 1);
+}
+
+.priceRegular {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(96, 96, 96, 1);
+  text-align: right;
+}
+
+.badgeWrapper {
+  margin: auto 0;
+}
+
+.strike {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: line-through;
+  color: rgba(143, 143, 143, 1);
+  text-align: right;
+}

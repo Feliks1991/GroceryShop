@@ -1,0 +1,95 @@
+.comentsBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.ratingGradation {
+  display: flex;
+  flex-direction: column;
+  width: 168px;
+  margin-right: 144px;
+}
+
+.currentRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  p {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.ratingGradationItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 688px;
+}
+.commentsList {
+  margin-bottom: 40px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.userName {
+  font-size: 18px;
+}
+
+.starsRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(143, 143, 143, 1);
+    margin-left: 16px;
+  }
+}
+
+.commentDate {
+  font-weight: 400;
+  font-size: 12px;
+  vertical-align: center;
+}
+
+.commentControlButton {
+  margin-left: 16px;
+}
+
+.ComentControlButtons {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  > button {
+    width: 18px;
+    height: 18px;
+    &:not(:first-child) {
+      transform: rotate(35deg);
+      margin-left: 5px;
+    }
+  }
+}

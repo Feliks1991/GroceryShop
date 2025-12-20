@@ -1,0 +1,87 @@
+.slider {
+  display: block;
+  height: 200px;
+  position: relative;
+}
+
+.dinamicSlide {
+  position: absolute;
+  top: 0;
+  animation-name: slide;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  height: 100%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.staticSlide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.delivery {
+  background-image: url(./assets/Background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliveryImage {
+  margin-right: 18px;
+  width: 300px;
+  height: 200px;
+}
+
+.deliveryDescr {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(65, 65, 65, 1);
+}
+.cash {
+  display: block;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(235, 254, 255, 1);
+}
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 145, 226, 1);
+  height: 22px;
+  width: 100%;
+}
+.storesCash {
+  position: absolute;
+  bottom: 4px;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

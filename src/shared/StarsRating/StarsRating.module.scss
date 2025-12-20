@@ -1,0 +1,49 @@
+.starsInit {
+  display: inline-block;
+  position: relative;
+  width: max-content;
+  font-size: 20px;
+  line-height: 1;
+  overflow: hidden;
+  &::before {
+    display: inline-block;
+    content: "★★★★★";
+    font-size: inherit;
+    color: rgb(191, 191, 191);
+  }
+}
+
+.selectedStars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.star {
+  font-size: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.starsValue {
+  display: inline-block;
+  width: var(--width, 0%);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: inherit;
+  line-height: inherit;
+  &::before {
+    display: inline-block;
+    content: "★★★★★";
+    font-size: inherit;
+    line-height: inherit;
+    color: rgb(255, 102, 51);
+  }
+}
