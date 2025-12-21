@@ -20,10 +20,14 @@ export const CartCard = ({ product }: CartCardProps) => {
   const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [qtyChange] = useQuantityMutation();
 
-  const qtyPostDebounce = (sku: string, newQty: number) => {
+  const productParamsSend = async (sku: string, newQty: number, checkStatus: boolean) => {
+    await qtyChange({ [sku]: { quantity: newQty, checked: checkStatus } });
+  };
+
+  const _qtyPostDebounce = (sku: string, newQty: number, checkStatus: boolean) => {
     if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    debounceTimerRef.current = setTimeout(async () => {
-      await qtyChange({ [sku]: { quantity: newQty, checked: true } });
+    debounceTimerRef.current = setTimeout(() => {
+      void productParamsSend(sku, newQty, checkStatus);
     }, 1000);
   };
 

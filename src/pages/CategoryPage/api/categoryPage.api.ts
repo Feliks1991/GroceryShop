@@ -3,6 +3,7 @@ import type Product from "@/app/store/ProductType";
 
 const categoryPageApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
+    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
     getFavoritedProducts: build.query<{ favorites: Product[]; skus: string[] }, void>({
       query: () => ({
         url: `products/favorites`,

@@ -10,6 +10,7 @@ type CartProductData = Omit<Product, "comments" | "rating"> & {
 
 const cartApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
+    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
     getCart: build.query<CartProductData[], void>({
       query: () => ({
         method: "GET",

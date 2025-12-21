@@ -9,7 +9,7 @@ type StarsRatingProps = {
 
 type Stars = { ui: string; color: string; rating: number };
 
-export const StarsRating = ({ value = 0, disabled = false, onChange }: StarsRatingProps) => {
+export const StarsRating = ({ value, disabled = false, onChange }: StarsRatingProps) => {
   const initialStars = [
     { ui: "★", color: "rgb(191, 191, 191)", rating: 1 },
     { ui: "★", color: "rgb(191, 191, 191)", rating: 2 },

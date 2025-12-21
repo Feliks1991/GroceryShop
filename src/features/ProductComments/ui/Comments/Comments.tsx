@@ -78,11 +78,11 @@ export const Comments = ({ category, sku }: CommentProps) => {
             <div className={Styles.commentsList}>
               {data.comments.map((comment, index) => (
                 <div key={index} className={Styles.comment}>
-                  <p className={Styles.userName}>{comment.user.name || "Test User"}</p>
+                  <p className={Styles.userName}>{comment.user?.name || "Test User"}</p>
                   <div className={Styles.starsRating}>
                     <StarsRating value={comment.rating} disabled />
                     <p className={Styles.commentDate}>{dateConvert(comment.date)}</p>
-                    {currentUser.user?.id === comment.user.id ? (
+                    {currentUser.user?.id === comment.user?.id && (
                       <div className={Styles.ComentControlButtons}>
                         <button onClick={() => void deleteCommentHandler(comment.id)}>
                           <Delete />
@@ -99,7 +99,7 @@ export const Comments = ({ category, sku }: CommentProps) => {
                           />
                         </button>
                       </div>
-                    ) : null}
+                    )}
                   </div>
                   <p className={Styles.commentText}>{comment.comment}</p>
                 </div>

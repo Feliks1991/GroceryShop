@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Styles from "./Checkbox.module.scss";
+import clsx from "clsx";
 
 type CheckboxProps = {
   children?: ReactNode;
@@ -20,7 +21,7 @@ export const Checkbox = ({ children, onChange, partialCheck, checked }: Checkbox
         type="checkbox"
       />
       <span
-        className={`${Styles.span} ${checked && Styles.checked} ${partialCheck && Styles.mixed}`}
+        className={clsx(Styles.span, checked && Styles.checked, partialCheck && Styles.mixed)}
       />
       {children}
     </label>

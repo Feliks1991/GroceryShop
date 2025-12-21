@@ -25,7 +25,6 @@ const cartSlice = createSlice({
         ]),
       );
     },
-
     qtyIncrease: (state, action: PayloadAction<{ sku: string }>) => {
       const { sku } = action.payload;
       if (state[sku].quantity >= 0) {
