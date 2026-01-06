@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import Styles from "./ModalWindowWrapper.module.scss";
-import X from "./assets/x.svg?react";
+import X from "./assets/X.svg?react";
 import { useEffect } from "react";
 
 type ModalWindowProps = {
