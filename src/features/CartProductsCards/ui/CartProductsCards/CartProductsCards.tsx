@@ -10,6 +10,12 @@ export const CartProductsCards = () => {
 
   const hasItem = data.length > 0;
 
+
+const p = process.env.NODE_ENV
+  console.log(p);
+
+
+
   return (
     <SectionWrapper title="Корзина">
       {hasItem && <SelectedCheckboxHandler />}

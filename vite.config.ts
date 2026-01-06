@@ -19,6 +19,7 @@ export default defineConfig({
         initialIsOpen: false,
         badgeStyle: "opacity: 0.5",
       },
+      enableBuild: false,
     }),
   ],
   resolve: {
