@@ -18,7 +18,7 @@ export const RangeSlider = ({ allowedPriceRange }: RangeSliderProps) => {
     if (Number.isFinite(allowedPriceRange[0]) && Number.isFinite(allowedPriceRange[1])) {
       setSliderValues(allowedPriceRange);
     }
-  }, [allowedPriceRange, setSliderValues]);
+  }, [allowedPriceRange]);
 
   useEffect(() => {
     if (dispatchTimerRef.current) {

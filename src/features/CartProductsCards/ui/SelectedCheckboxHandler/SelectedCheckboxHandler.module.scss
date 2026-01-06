@@ -1,0 +1,14 @@
+.cartControllers {
+  display: flex;
+  width: 304px;
+  padding: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.deleteButton {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(255, 102, 51, 1);
+}

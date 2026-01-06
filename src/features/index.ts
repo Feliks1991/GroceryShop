@@ -7,5 +7,5 @@ export { Comments } from "./ProductComments/ui/Comments/Comments";
 export { SimilarProduct } from "./SimilarProduct/SimilarProduct";
 export { DescriptionTable } from "./Product/ui/DescriptionTable/DescriptionTable";
 export { ProductPagePrice } from "./Product/ui/ProductPagePrice/ProductPagePrice";
-export { CartProductsCards } from "./CartProductsCards/CartProductsCards";
+export { CartProductsCards } from "./CartProductsCards/ui/CartProductsCards/CartProductsCards";
 export { CategoryPageProductsCards } from "./CategoryPageProductsCards/CategoryPageProductsCards";

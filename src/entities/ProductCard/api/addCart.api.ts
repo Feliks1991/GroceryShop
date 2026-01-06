@@ -2,7 +2,7 @@ import { baseApi } from "@/shared";
 
 const addCartApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
-    cartToggle: build.mutation<{ message: "string" }, { category: string; SKU: string }>({
+    cartToggle: build.mutation<{ message: string }, { category: string; SKU: string }>({
       query: ({ category, SKU }) => ({
         method: "POST",
         url: `cart/${category}/${SKU}`,

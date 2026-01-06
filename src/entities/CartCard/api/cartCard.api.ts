@@ -1,17 +1,17 @@
 import { baseApi } from "@/shared";
 
-const cartCardApi = baseApi.injectEndpoints({
+export const cartCardApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
-    quantity: build.mutation<
+    cartStateUpdate: build.mutation<
       { message: string },
       Record<string, { quantity: number; checked: boolean }>
     >({
-      query: (qtyData) => ({
+      query: (newState) => ({
         method: "PATCH",
-        url: "cart/quantity",
-        data: qtyData,
+        url: "cart/update",
+        data: newState,
       }),
-      invalidatesTags: (_result, _error) => [
+      invalidatesTags: () => [
         {
           type: "Cart",
         },
@@ -20,4 +20,4 @@ const cartCardApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useQuantityMutation } = cartCardApi;
+export const { useCartStateUpdateMutation } = cartCardApi;

@@ -4,7 +4,8 @@ import { api } from "../api/Fetch.ts";
 import { authReducer } from "./user.slice.ts";
 import { deleteUser, logout } from "./userThunk.ts";
 import { baseApi } from "@/shared";
-import cartReReducer from "@/features/CartProductsCards/model/cart.slice.ts";
+import cartReReducer from "@/entities/CartCard/model/cartCard.slice.ts";
+import { listenerMiddleware } from "./listeners/cart.listeners.ts";
 
 export const logoutMiddleware: Middleware = () => (next) => (action) => {
   const token = localStorage.getItem("accessToken");
@@ -29,6 +30,7 @@ export const store = configureStore({
         extraArgument: api,
       },
     })
+      .prepend(listenerMiddleware.middleware)
       .concat(baseApi.middleware)
       .concat(logoutMiddleware),
 });

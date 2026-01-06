@@ -42,7 +42,7 @@ export const Comments = ({ category, sku }: CommentProps) => {
         id: id,
       }).unwrap();
     } catch (error) {
-      console.log("Error", error);
+      console.error("Error", error);
     }
   };
 

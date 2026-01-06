@@ -3,43 +3,26 @@ import Minus from "./assets/Minus.svg?react";
 import Plus from "./assets/Plus.svg?react";
 import { Checkbox, PercentageBadge } from "@/shared";
 import type Product from "@/app/store/ProductType";
-import { useRef } from "react";
-import { useQuantityMutation } from "./api/cartCard.api";
 import { useAppDispatch, useAppSelector } from "@/app/store/reduxTypes";
-import {
-  qtyDecrease,
-  qtyIncrease,
-  toggleChecked,
-} from "@/features/CartProductsCards/model/cart.slice";
+import { checkedToggle, quantityChange } from "./model/cartCard.slice";
 
 type CartCardProps = {
   product: Omit<Product, "comments" | "rating"> & { quantity: number; checked: boolean };
 };
 
 export const CartCard = ({ product }: CartCardProps) => {
-  const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [qtyChange] = useQuantityMutation();
-
-  const productParamsSend = async (sku: string, newQty: number, checkStatus: boolean) => {
-    await qtyChange({ [sku]: { quantity: newQty, checked: checkStatus } });
-  };
-
-  const _qtyPostDebounce = (sku: string, newQty: number, checkStatus: boolean) => {
-    if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    debounceTimerRef.current = setTimeout(() => {
-      void productParamsSend(sku, newQty, checkStatus);
-    }, 1000);
-  };
+  const state = useAppSelector((state) => state.cartSlice[product.SKU]);
 
   const dispatch = useAppDispatch();
-
-  const state = useAppSelector((state) => state.cartSlice[product.SKU]);
 
   return (
     <div className={Styles.cartCard}>
       <div className={Styles.checkboxWrapper}>
         <Checkbox
-          onChange={() => dispatch(toggleChecked({ sku: product.SKU }))}
+          onChange={() => {
+            const status = !state.checked;
+            dispatch(checkedToggle({ sku: product.SKU, checked: status }));
+          }}
           checked={state.checked}
         />
       </div>
@@ -75,7 +58,10 @@ export const CartCard = ({ product }: CartCardProps) => {
         <div className={Styles.qtySelector}>
           <button
             onClick={() => {
-              dispatch(qtyDecrease({ sku: product.SKU }));
+              const qty = state.quantity - 1;
+              if (qty >= 1 && qty <= 20) {
+                dispatch(quantityChange({ sku: product.SKU, quantity: qty }));
+              }
             }}
           >
             <Minus />
@@ -83,7 +69,10 @@ export const CartCard = ({ product }: CartCardProps) => {
           <p>{state.quantity}</p>
           <button
             onClick={() => {
-              dispatch(qtyIncrease({ sku: product.SKU }));
+              const qty = state.quantity + 1;
+              if (qty >= 1 && qty <= 20) {
+                dispatch(quantityChange({ sku: product.SKU, quantity: qty }));
+              }
             }}
           >
             <Plus />

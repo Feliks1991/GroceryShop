@@ -1,0 +1,14 @@
+.cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartCards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 60px;
+  & > :not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

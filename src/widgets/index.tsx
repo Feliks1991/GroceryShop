@@ -1,3 +1,4 @@
+export { OrderSummary } from "./OrderSummary/OrderSummary";
 export { ModalWindow } from "./ModalWindow/ui/ModalWindow/ModalWindow";
 export { ModalWindowWrapper } from "./ModalWindow/ui/ModalWindowWrapper/ModalWindowWrapper";
 export { Sidebar } from "./Sidebar/Sidebar";

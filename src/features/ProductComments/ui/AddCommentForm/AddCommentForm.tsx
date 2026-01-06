@@ -50,7 +50,7 @@ export const AddCommentForm = ({ category, sku, comment }: AddCommentFormProps) 
       }
       reset();
     } catch (error) {
-      console.log("Error", error);
+      console.error("Error", error);
     }
   };
 
