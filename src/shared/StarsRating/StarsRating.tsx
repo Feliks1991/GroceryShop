@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Styles from "./starsRating.module.scss";
+import Styles from "./StarsRating.module.scss";
 
 type StarsRatingProps = {
   value: number;
