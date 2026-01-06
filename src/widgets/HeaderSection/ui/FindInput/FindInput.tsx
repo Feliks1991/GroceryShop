@@ -1,5 +1,5 @@
 import Styles from "./FindInput.module.scss";
-import Search from "./assets/search.svg?react";
+import Search from "./assets/Search.svg?react";
 
 const FindInput = () => {
   return (
