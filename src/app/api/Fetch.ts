@@ -17,7 +17,7 @@ type BaseQuery = {
 };
 
 export const instance: AxiosInstance = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "http://57.129.5.102:5000",
   timeout: 5000,
   withCredentials: true,
   headers: {
