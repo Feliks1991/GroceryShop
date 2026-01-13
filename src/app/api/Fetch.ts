@@ -17,7 +17,7 @@ type BaseQuery = {
 };
 
 export const instance: AxiosInstance = axios.create({
-  baseURL: "https://grocerybackend-production-6d47.up.railway.app",
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 10000,
   withCredentials: true,
   headers: {
