@@ -17,8 +17,8 @@ type BaseQuery = {
 };
 
 export const instance: AxiosInstance = axios.create({
-  baseURL: "http://57.129.5.102:5000",
-  timeout: 5000,
+  baseURL: "https://grocerybackend-production-6d47.up.railway.app",
+  timeout: 10000,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",

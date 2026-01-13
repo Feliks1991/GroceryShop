@@ -9,6 +9,7 @@ type PasswordInputProps<T extends FieldValues> = {
   label: string;
   register?: UseFormRegister<T>;
   error?: string | null;
+  autoComplete: "new-password" | "current-password";
 };
 
 export const PasswordInput = <T extends FieldValues>({
@@ -17,6 +18,7 @@ export const PasswordInput = <T extends FieldValues>({
   label,
   register,
   error,
+  autoComplete,
 }: PasswordInputProps<T>) => {
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
@@ -35,6 +37,7 @@ export const PasswordInput = <T extends FieldValues>({
           {...register?.(id)}
           id={id}
           type={passwordVisible ? "text" : type}
+          autoComplete={autoComplete}
         />
         <Eye onClick={visibleHandler} className={Styles.passwordIcon} />
       </div>

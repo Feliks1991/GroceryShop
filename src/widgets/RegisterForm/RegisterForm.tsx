@@ -1,16 +1,12 @@
 import Styles from "./RegisterForm.module.scss";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { FormInput } from "../../../../shared/FormInput/FormInput";
-import { FormButton } from "../../../../shared/FormButton/FormButton";
-import { PasswordInput } from "../PasswordInput/PasswordInput";
 import { useAppDispatch } from "@/app/store/reduxTypes";
 import { registerUser } from "@/app/store/userThunk";
 import { UpsertUserSchema } from "@/app/store/zodTypesUser";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SexChecker } from "@/shared";
-
-// const RegisterSchema  = UpsertUserSchema.partial({name: true, password: true, email: true, phone: true})
+import { FormInput, SexChecker, PasswordInput, FormButton } from "@/shared";
+import { switchType } from "../ModalWindow/model/ModalWindow.slice";
 
 type Register = z.infer<typeof UpsertUserSchema>;
 
@@ -36,6 +32,7 @@ export const RegisterForm = () => {
 
   return (
     <form onSubmit={(event) => void handleSubmit(submit)(event)} className={Styles.registerForm}>
+      <p className={Styles.title}>Регистрация</p>
       <div className={Styles.fields}>
         <div className={Styles.inputColumn}>
           <FormInput
@@ -65,8 +62,14 @@ export const RegisterForm = () => {
             label={"Пароль"}
             register={register}
             error={errors.password?.message}
+            autoComplete={"new-password"}
           />
-          <PasswordInput id={"confirmPassword"} type={"password"} label={"Повторить пароль"} />
+          <PasswordInput
+            id={"confirmPassword"}
+            type={"password"}
+            label={"Повторить пароль"}
+            autoComplete={"new-password"}
+          />
         </div>
         <div className={Styles.inputColumn}>
           <FormInput
@@ -102,6 +105,15 @@ export const RegisterForm = () => {
       </div>
       <div className={Styles.formBtnWrap}>
         <FormButton type={"submit"}>Отправить</FormButton>
+      </div>
+      <div className={Styles.loginBtnWrap}>
+        <button
+          className={Styles.toLoginBtn}
+          type="button"
+          onClick={() => dispatch(switchType("login"))}
+        >
+          Войти
+        </button>
       </div>
     </form>
   );

@@ -1,6 +1,7 @@
+export { RegisterForm } from "./RegisterForm/RegisterForm";
+export { LoginForm } from "./LoginForm/LoginForm";
+export { ModalWindow } from "./ModalWindow/ModalWindow";
 export { OrderSummary } from "./OrderSummary/OrderSummary";
-export { ModalWindow } from "./ModalWindow/ui/ModalWindow/ModalWindow";
-export { ModalWindowWrapper } from "./ModalWindow/ui/ModalWindowWrapper/ModalWindowWrapper";
 export { Sidebar } from "./Sidebar/Sidebar";
 export { ProductCards } from "./ProductCards/ui/ProductCards";
 export { OurShops } from "./OurShops/OurShops";

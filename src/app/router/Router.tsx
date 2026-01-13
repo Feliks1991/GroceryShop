@@ -11,14 +11,11 @@ export const router = createBrowserRouter([
     element: <Layout />,
     loader: async () => {
       const token = localStorage.getItem("accessToken");
-      if (token) {
+      // const userData = useAppSelector(state=> state.auth.user)
+      if (token ) {
         await store.dispatch(user());
-      } else {
-        await store.dispatch(logout());
       }
     },
-    children: RouteConfig.map(({ index, path, ...rest }) =>
-      index ? { index: true, element: rest.element } : { path, element: rest.element },
-    ),
+    children: RouteConfig
   },
 ]);

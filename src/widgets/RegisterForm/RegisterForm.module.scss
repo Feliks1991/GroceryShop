@@ -3,6 +3,13 @@
   flex-direction: column;
   width: 552px;
 }
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(65, 65, 65, 1);
+  margin-bottom: 40px;
+}
 
 .fields {
   display: flex;
@@ -64,4 +71,22 @@
   width: 260px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.loginBtnWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.toLoginBtn {
+  border: 1px solid rgba(112, 192, 91, 1);
+  width: 121px;
+  height: 32px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 4px;
+  color: rgba(112, 192, 91, 1);
 }

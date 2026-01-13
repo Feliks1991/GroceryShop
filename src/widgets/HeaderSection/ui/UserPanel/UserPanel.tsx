@@ -2,9 +2,10 @@ import DownArrow from "./assets/DownArrow.svg?react";
 import Login from "./assets/Login.svg?react";
 import UserPhoto from "./assets/Alex.png";
 import Styles from "./UserPanel.module.scss";
-import { useState } from "react";
 import { Button } from "@/shared";
-import { ModalWindowWrapper, ModalWindow } from "@/widgets";
+import { ModalWindow } from "@/widgets";
+import { useAppDispatch } from "@/app/store/reduxTypes";
+import { openModal } from "@/widgets/ModalWindow/model/ModalWindow.slice";
 
 type UserPanelProps = {
   visible: boolean;
@@ -14,7 +15,7 @@ type UserPanelProps = {
 };
 
 const UserPanel = ({ visible, open, close, userName }: UserPanelProps) => {
-  const [loginPanelVisible, setLoginPanelVisible] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   if (!userName) {
     return (
@@ -22,7 +23,7 @@ const UserPanel = ({ visible, open, close, userName }: UserPanelProps) => {
         <div className={Styles.loginButton}>
           <Button
             onClick={() => {
-              setLoginPanelVisible(true);
+              dispatch(openModal("login"));
             }}
             type={"button"}
           >
@@ -32,14 +33,7 @@ const UserPanel = ({ visible, open, close, userName }: UserPanelProps) => {
             </div>
           </Button>
         </div>
-        <ModalWindowWrapper
-          modalToggle={() => {
-            setLoginPanelVisible(false);
-          }}
-          loginPanelVisible={loginPanelVisible}
-        >
-          <ModalWindow loginPanelVisible={loginPanelVisible} />
-        </ModalWindowWrapper>
+        <ModalWindow />
       </>
     );
   }

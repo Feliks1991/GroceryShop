@@ -23,10 +23,7 @@ export const LoginResponseSchema = BaseUserSchema.extend({
 
 export const LoginShema = z.object({
   email: z.email().min(1),
-  password: z
-    .string()
-    .min(8, "Must be at least 8 characters")
-    .max(15, "Must be at most 15 characters"),
+  password: z.string(),
 });
 
 export const MessageSchema = z.object({

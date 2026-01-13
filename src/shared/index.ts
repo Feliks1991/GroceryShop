@@ -1,3 +1,4 @@
+export { PasswordInput } from "./PasswordInput/PasswordInput";
 export { Checkbox } from "./Checkbox/Checkbox";
 export { baseApi } from "./Api/baseApi";
 export { FormButton } from "./FormButton/FormButton";

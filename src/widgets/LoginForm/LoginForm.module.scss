@@ -1,0 +1,46 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(65, 65, 65, 1);
+  margin-bottom: 32px;
+}
+
+.returnButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 32px;
+  margin-top: 40px;
+  > p {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(117, 115, 113, 1);
+    margin-left: 8px;
+  }
+}
+
+.stateBtnWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.stateButton {
+  border: 1px solid rgba(112, 192, 91, 1);
+  width: 121px;
+  height: 32px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 4px;
+  color: rgba(112, 192, 91, 1);
+}
